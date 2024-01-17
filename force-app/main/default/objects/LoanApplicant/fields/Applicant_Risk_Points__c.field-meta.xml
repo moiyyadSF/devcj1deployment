@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Applicant_Risk_Points__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>The sum of points scored by the Applicant on the Risk Assessment Form.</inlineHelpText>
+    <label>Applicant Risk Points</label>
+    <summarizedField>Compliance__c.CR_Rating__c</summarizedField>
+    <summaryForeignKey>Compliance__c.Applicant__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Initials__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE ( Total_Applicants__c ,
+
+1, &quot;Initials _____&quot;,
+2, &quot;Initials _____/_____&quot;,
+3, &quot;Initials _____/_____/_____&quot;,
+4, &quot;Initials _____/_____/_____/_____&quot;,
+5, &quot;Initials _____/_____/_____/_____/_____&quot;,
+6, &quot;Initials _____/_____/_____/_____/_____/_____&quot;,
+7, &quot;Initials _____/_____/_____/_____/_____/_____/_____&quot;,
+8, &quot;Initials _____/_____/_____/_____/_____/_____/_____/_____&quot;,
+9, &quot;Initials _____/_____/_____/_____/_____/_____/_____/_____/_____&quot;,
+&quot;Initials _____/_____/_____/_____/_____/_____/_____/_____/_____/_____&quot;
+)</formula>
+    <label>Initials</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

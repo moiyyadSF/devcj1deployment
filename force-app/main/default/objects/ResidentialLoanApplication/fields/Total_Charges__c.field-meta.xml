@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Charges__c</fullName>
+    <externalId>false</externalId>
+    <formula>Title_Insurance_Fee__c +
+Inspection_Fee__c +
+Legal_Fee__c +
+AWC_Fee__c +
+Total_Broker_Fee__c +
+Other_Fee_1__c +
+Other_Fee_2__c +
+Administration_Fee__c +
+Interest_Reserve_Fee__c +
+Anticipated_IAD__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Total Charges</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

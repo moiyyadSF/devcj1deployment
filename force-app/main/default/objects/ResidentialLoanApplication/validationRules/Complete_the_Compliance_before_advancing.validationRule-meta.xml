@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Complete_the_Compliance_before_advancing</fullName>
+    <active>true</active>
+    <errorConditionFormula>(ISPICKVAL(Stage__c,&apos;Funded&apos;) ||ISPICKVAL(Stage__c,&apos;Complete&apos;)) &amp;&amp; 
+(Has_the_Client_Risk_Assessment_Complete__c = false ||
+Has_the_Transaction_Checklist_Completed__c = false
+)</errorConditionFormula>
+    <errorMessage>Please finish the compliance section before moving forward</errorMessage>
+</ValidationRule>

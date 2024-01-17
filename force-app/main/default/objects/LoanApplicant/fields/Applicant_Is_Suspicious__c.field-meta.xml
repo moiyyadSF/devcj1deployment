@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Applicant_Is_Suspicious__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(Applicant_Suspiciousness__c == 1,&apos;Yes&apos;,&apos;No&apos;)</formula>
+    <inlineHelpText>Is the applicant suspicious based on the question on the Transaction Checklist form?</inlineHelpText>
+    <label>Is Suspicious?</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

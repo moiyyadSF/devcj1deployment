@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Field_Truthy_Update_Value__c</fullName>
+    <defaultValue>&quot;Admitted&quot;</defaultValue>
+    <externalId>false</externalId>
+    <fieldManageability>SubscriberControlled</fieldManageability>
+    <inlineHelpText>The value the Field To Update Api Name field must be assigned if the child criteria are evaluated to true</inlineHelpText>
+    <label>Field Truthy Update Value</label>
+    <length>50</length>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

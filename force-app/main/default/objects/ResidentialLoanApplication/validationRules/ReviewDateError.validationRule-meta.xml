@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ReviewDateError</fullName>
+    <active>true</active>
+    <errorConditionFormula>Review_Date__c &gt; Today()</errorConditionFormula>
+    <errorDisplayField>Review_Date__c</errorDisplayField>
+    <errorMessage>The review date cannot be greater than today</errorMessage>
+</ValidationRule>

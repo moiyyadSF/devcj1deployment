@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Present_Value__c</fullName>
+    <externalId>false</externalId>
+    <formula>Blended_Loan_Amount__c -
+(
+Inspection_Fee__c+
+Appraisal_Fee__c+
+Title_Insurance_Fee__c+
+Administration_Fee__c+
+Interest_Reserve_Fee__c+
+Legal_Fee__c+
+Other_Fee_1__c+
+Other_Fee_2__c+
+AWC_Fee__c+
+/*which includes 3rd party*/
+Total_Broker_Fee__c 
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Present Value</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

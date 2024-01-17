@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DecisionMatrixDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Set the Risk Rating</label>
+    <processType>Bre</processType>
+    <type>Standard</type>
+    <versions>
+        <fullName>Set_the_Risk_Rating_V1</fullName>
+        <columns>
+            <columnType>Input</columnType>
+            <dataType>Text</dataType>
+            <displaySequence>1</displaySequence>
+            <isWildcardColumn>false</isWildcardColumn>
+            <name>RiskRating</name>
+        </columns>
+        <columns>
+            <columnType>Output</columnType>
+            <dataType>Text</dataType>
+            <displaySequence>2</displaySequence>
+            <isWildcardColumn>false</isWildcardColumn>
+            <name>RiskPoints</name>
+        </columns>
+        <decisionMatrixDefinition>Set_the_Risk_Rating</decisionMatrixDefinition>
+        <label>Set the Risk Rating V1</label>
+        <startDate>2023-12-01T13:57:08.000Z</startDate>
+        <status>Active</status>
+        <versionNumber>1</versionNumber>
+    </versions>
+</DecisionMatrixDefinition>

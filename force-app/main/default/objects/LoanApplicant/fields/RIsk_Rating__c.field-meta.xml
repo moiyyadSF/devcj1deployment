@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RIsk_Rating__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(Applicant_Risk_Points__c &gt; 8,&apos;High&apos;,&apos;Low&apos;)</formula>
+    <inlineHelpText>The final risk rating of the applicant is based on the points scored in the Client Risk Assessment form.</inlineHelpText>
+    <label>Risk Rating</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

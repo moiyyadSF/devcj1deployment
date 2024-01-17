@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Enclose_Fee_Schedule__c</fullName>
+    <externalId>false</externalId>
+    <formula>if ( OR(Deal_Province__c = &quot;BC&quot;, Deal_Province__c = &quot;ON&quot;) , true , false)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Enclose Fee Schedule</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

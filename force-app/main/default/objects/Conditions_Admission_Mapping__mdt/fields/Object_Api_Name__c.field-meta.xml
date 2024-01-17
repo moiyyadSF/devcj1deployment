@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Object_Api_Name__c</fullName>
+    <externalId>false</externalId>
+    <fieldManageability>SubscriberControlled</fieldManageability>
+    <inlineHelpText>The Object on which the fields added to the child Condition Admission Criteria are present on</inlineHelpText>
+    <label>Object Api Name</label>
+    <required>true</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>CJA_Mortgage__Mortgage__c</fullName>
+                <default>true</default>
+                <label>CJA_Mortgage__Mortgage__c</label>
+            </value>
+            <value>
+                <fullName>LoanApplicantIncome</fullName>
+                <default>false</default>
+                <label>LoanApplicantIncome</label>
+            </value>
+            <value>
+                <fullName>LoanApplicationEmployment</fullName>
+                <default>false</default>
+                <label>LoanApplicationEmployment</label>
+            </value>
+            <value>
+                <fullName>LoanApplicationProperty</fullName>
+                <default>false</default>
+                <label>LoanApplicationProperty</label>
+            </value>
+            <value>
+                <fullName>ResidentialLoanApplication</fullName>
+                <default>false</default>
+                <label>ResidentialLoanApplication</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

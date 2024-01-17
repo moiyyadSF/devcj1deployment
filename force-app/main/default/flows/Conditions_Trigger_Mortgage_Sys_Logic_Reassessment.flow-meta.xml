@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>59.0</apiVersion>
+    <constants>
+        <name>ObjectName</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Mortgage</stringValue>
+        </value>
+    </constants>
+    <environments>Default</environments>
+    <interviewLabel>Conditions [Trigger] - Mortgage Sys Logic Reassessment {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Conditions [Trigger] - Mortgage Sys Logic Reassessment</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Call_Conditions_AutoLaunched_Sys_Logic_Reassessment</targetReference>
+        </connector>
+        <object>CJA_Mortgage__Mortgage__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Draft</status>
+    <subflows>
+        <name>Call_Conditions_AutoLaunched_Sys_Logic_Reassessment</name>
+        <label>Call Conditions [AutoLaunched] - Sys Logic Reassessment</label>
+        <locationX>176</locationX>
+        <locationY>323</locationY>
+        <flowName>Conditions_AutoLaunched_Sys_Logic_Assessment</flowName>
+        <inputAssignments>
+            <name>ObjectedUpdated</name>
+            <value>
+                <elementReference>ObjectName</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>RLA_ID</name>
+            <value>
+                <elementReference>$Record.CJA_Mortgage__Loan_Application__c</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+</Flow>

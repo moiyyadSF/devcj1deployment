@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>If Income source includes Contract Incom</label>
+    <protected>false</protected>
+    <values>
+        <field>Conditions_Admission_Mapping__c</field>
+        <value xsi:type="xsd:string">Income_Verification_Contract_Income</value>
+    </values>
+    <values>
+        <field>Field_Api_Name__c</field>
+        <value xsi:type="xsd:string">IncomeSourceType</value>
+    </values>
+    <values>
+        <field>Operator__c</field>
+        <value xsi:type="xsd:string">Equal To</value>
+    </values>
+    <values>
+        <field>Value__c</field>
+        <value xsi:type="xsd:string">Contract Income</value>
+    </values>
+</CustomMetadata>

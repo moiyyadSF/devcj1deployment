@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>58.0</apiVersion>
+    <decisions>
+        <name>Check_if_new</name>
+        <label>Check if new</label>
+        <locationX>710</locationX>
+        <locationY>431</locationY>
+        <defaultConnector>
+            <targetReference>update_yes</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>if_new_tc</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>isnew</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>set_value_as_no</targetReference>
+            </connector>
+            <label>if new tc</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_RecType</name>
+        <label>Check RecType</label>
+        <locationX>644</locationX>
+        <locationY>323</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>If_Client_Risk_Assessment</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.RecordType.DeveloperName</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>Client_Risk_Assessment</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Check_type</targetReference>
+            </connector>
+            <label>If Client_Risk_Assessment</label>
+        </rules>
+        <rules>
+            <name>If_Transaction_checklist</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.RecordType.DeveloperName</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>Transaction_checklist</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Check_if_new</targetReference>
+            </connector>
+            <label>If Transaction_checklist</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_type</name>
+        <label>Check type</label>
+        <locationX>182</locationX>
+        <locationY>431</locationY>
+        <defaultConnector>
+            <targetReference>Copy_1_of_update_rating</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>type_client_geography</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Client Geography</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Rating__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>0</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>isnew</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>update_the_of_client_risk_assessment</targetReference>
+            </connector>
+            <label>type= client geography</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <formulas>
+        <name>GetRating</name>
+        <dataType>Number</dataType>
+        <expression>VALUE(BLANKVALUE(TEXT( {!$Record.Rating__c}),&apos;0&apos;))</expression>
+        <scale>2</scale>
+    </formulas>
+    <formulas>
+        <name>GetYes</name>
+        <dataType>Number</dataType>
+        <expression>If(Text({!$Record.Answer__c}) == &apos;Yes&apos;, 1, 0)</expression>
+        <scale>2</scale>
+    </formulas>
+    <formulas>
+        <name>isnew</name>
+        <dataType>Boolean</dataType>
+        <expression>ISNEW()</expression>
+    </formulas>
+    <interviewLabel>On Compliance Update {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>On Compliance Update</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Copy_1_of_update_rating</name>
+        <label>Copy 1 of update rating</label>
+        <locationX>314</locationX>
+        <locationY>539</locationY>
+        <inputAssignments>
+            <field>CR_Rating__c</field>
+            <value>
+                <elementReference>GetRating</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>set_value_as_no</name>
+        <label>set value as no</label>
+        <locationX>578</locationX>
+        <locationY>539</locationY>
+        <inputAssignments>
+            <field>Answer__c</field>
+            <value>
+                <stringValue>No</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>update_the_of_client_risk_assessment</name>
+        <label>update the of client risk assessment</label>
+        <locationX>50</locationX>
+        <locationY>539</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Client Geography</stringValue>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>CR_Rating__c</field>
+            <value>
+                <numberValue>1.0</numberValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Rating__c</field>
+            <value>
+                <stringValue>1</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>update_yes</name>
+        <label>update yes</label>
+        <locationX>842</locationX>
+        <locationY>539</locationY>
+        <inputAssignments>
+            <field>If_yes__c</field>
+            <value>
+                <elementReference>GetYes</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>518</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Check_RecType</targetReference>
+        </connector>
+        <object>Compliance__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Draft</status>
+    <textTemplates>
+        <name>HighRiskRating</name>
+        <isViewedAsPlainText>false</isViewedAsPlainText>
+        <text>&lt;p&gt;&lt;strong style=&quot;color: rgb(255, 0, 0);&quot;&gt;HIGH&lt;/strong&gt;&lt;/p&gt;</text>
+    </textTemplates>
+</Flow>

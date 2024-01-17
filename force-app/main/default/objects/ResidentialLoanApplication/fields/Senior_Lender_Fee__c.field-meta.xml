@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Senior_Lender_Fee__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+    ISPICKVAL(Senior_Lender_Fee_Type__c, &quot;Percent&quot;),
+    Senior_Loan_Amount__c * Senior_Lender_Fee_Percent__c,
+    Senior_Lender_Fee_Custom__c
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Senior Lender Fee</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

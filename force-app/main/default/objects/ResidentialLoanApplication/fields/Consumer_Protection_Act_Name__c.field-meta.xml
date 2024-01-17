@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Consumer_Protection_Act_Name__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE ( Deal_Province__c,
+
+&quot;AB&quot;,
+&quot;Consumer Protection Act of Alberta&quot;,
+
+&quot;BC&quot;,
+&quot;Business Practices and Consumer Protection Act&quot;,
+
+&quot;Consumer Protection Act 2002 Ontario&quot;
+)</formula>
+    <label>Consumer Protection Act Name</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

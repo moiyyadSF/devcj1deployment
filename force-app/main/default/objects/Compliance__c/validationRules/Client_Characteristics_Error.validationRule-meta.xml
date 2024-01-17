@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Client_Characteristics_Error</fullName>
+    <active>false</active>
+    <errorConditionFormula>!((ISPICKVAL(Type__c,&apos;Client Characteristics&apos;) &amp;&amp; ISPICKVAL(Rating__c,&apos;0&apos;) )
+||
+(ISPICKVAL(Type__c,&apos;Client Characteristics&apos;) &amp;&amp; ISPICKVAL(Rating__c,&apos;3&apos;) ))</errorConditionFormula>
+    <errorDisplayField>Rating__c</errorDisplayField>
+    <errorMessage>Please select the following answer: 0 or 3</errorMessage>
+</ValidationRule>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cannot_move_to_approve_from_underwriting</fullName>
+    <active>true</active>
+    <errorConditionFormula>ISPICKVAL(PRIORVALUE(Stage__c),&apos;Underwriting&apos;) &amp;&amp; ISPICKVAL(Stage__c,&apos;Approved&apos;)</errorConditionFormula>
+    <errorMessage>You cannot move to Approved from Underwriting Stage</errorMessage>
+</ValidationRule>

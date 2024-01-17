@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Fields_view</fullName>
+    <columns>MasterLabel</columns>
+    <columns>Task_Subject__c</columns>
+    <columns>Object_Api_Name__c</columns>
+    <columns>RLA_Relationship_Field_Api_Name__c</columns>
+    <columns>Boolean_Logic__c</columns>
+    <columns>Field_To_Update_Api_Name__c</columns>
+    <columns>Field_Truthy_Update_Value__c</columns>
+    <columns>Field_Falsy_Update_Value__c</columns>
+    <columns>Child_Criteria_Reducer__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>Fields view</label>
+</ListView>

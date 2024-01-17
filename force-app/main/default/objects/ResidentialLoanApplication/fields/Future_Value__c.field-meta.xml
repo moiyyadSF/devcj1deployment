@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Future_Value__c</fullName>
+    <externalId>false</externalId>
+    <formula>( Blended_Loan_Amount__c * ( EXP ( (Loan_Term__c * 12 ) * LN ( 1 +( Blended_Interest_Rate__c /12 ) ) ) ) )
+-
+(round(Blended_Payment__c,2) * ( ( EXP ( ( Loan_Term__c * 12) * LN ( 1+ (Blended_Interest_Rate__c / 12 ) ) ) ) -1 ) /
+( Blended_Interest_Rate__c /12 ) )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Future Value</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

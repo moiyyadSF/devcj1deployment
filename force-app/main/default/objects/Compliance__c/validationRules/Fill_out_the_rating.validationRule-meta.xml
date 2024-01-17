@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Fill_out_the_rating</fullName>
+    <active>true</active>
+    <errorConditionFormula>RecordType.DeveloperName = &apos;Client_Risk_Assessment&apos;
+&amp;&amp; ISPICKVAL(Rating__c,&apos;&apos;)</errorConditionFormula>
+    <errorDisplayField>Rating__c</errorDisplayField>
+    <errorMessage>Please enter your rating for the question</errorMessage>
+</ValidationRule>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>CRA-008</label>
+    <protected>false</protected>
+    <values>
+        <field>Question__c</field>
+        <value xsi:type="xsd:string">The complexity of the ownership structure appears inconsistent with the size and type of the business</value>
+    </values>
+    <values>
+        <field>RecType__c</field>
+        <value xsi:type="xsd:string">Client Risk Assessment</value>
+    </values>
+    <values>
+        <field>Type__c</field>
+        <value xsi:type="xsd:string">Single High-Risk Factors</value>
+    </values>
+</CustomMetadata>

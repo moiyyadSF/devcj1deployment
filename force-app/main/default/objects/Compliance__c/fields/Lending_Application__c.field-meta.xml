@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lending_Application__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Lookup to what application this compliance record links to</inlineHelpText>
+    <label>Lending Application</label>
+    <referenceTo>ResidentialLoanApplication</referenceTo>
+    <relationshipLabel>Compliances</relationshipLabel>
+    <relationshipName>Compliances</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

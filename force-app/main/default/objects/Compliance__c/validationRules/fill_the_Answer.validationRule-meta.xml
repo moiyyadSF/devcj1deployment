@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>fill_the_Answer</fullName>
+    <active>true</active>
+    <errorConditionFormula>RecordType.DeveloperName = &apos;Transaction_checklist&apos; 
+&amp;&amp; ISPICKVAL(Answer__c,&apos;&apos;)</errorConditionFormula>
+    <errorDisplayField>Answer__c</errorDisplayField>
+    <errorMessage>Please select an answer to the question</errorMessage>
+</ValidationRule>

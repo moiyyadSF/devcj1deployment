@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Fill_in_UTR_before_Closing</fullName>
+    <active>true</active>
+    <errorConditionFormula>UTR_Notification_Sent__c = true &amp;&amp; Is_UTR_Complete__c = false &amp;&amp; 
+Overall_Suspiciousness_Text__c == &apos;Yes&apos; &amp;&amp;
+(ISPICKVAL(Stage__c,&apos;Complete&apos;))</errorConditionFormula>
+    <errorMessage>Please fill in the UTR and mark it as complete</errorMessage>
+</ValidationRule>

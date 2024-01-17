@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Enclose_Std_Mortgage_Terms__c</fullName>
+    <externalId>false</externalId>
+    <formula>if ( Deal_Province__c = &quot;AB&quot; , true , false)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Enclose Std Mortgage Terms</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

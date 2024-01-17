@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>lending_Application_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Lending Application Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Lending Application Records</fullName>
+                <default>true</default>
+                <label>Lending Application Records</label>
+            </value>
+            <value>
+                <fullName>A Product</fullName>
+                <default>false</default>
+                <label>A Product</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>
